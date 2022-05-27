@@ -1,13 +1,14 @@
-import { Fragment } from 'react'
-import GlobalStyle from './globalStyles.styled'
+import { Fragment } from 'react';
+import GlobalStyle from './globalStyles.styled';
+import AnimatedBlocks from './components/AnimatedBlocks/AnimatedBlocks';
 
 function App() {
   return (
     <Fragment>
       <GlobalStyle />
-      Hello
+      <AnimatedBlocks/>
     </Fragment>
   )
 }
 
-export default App
+export default App;
