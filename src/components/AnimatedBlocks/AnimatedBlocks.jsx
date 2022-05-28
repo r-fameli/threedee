@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { softShadows, OrbitControls } from "@react-three/drei";
 
-import SpinningMesh from "../SpinningMesh/SpinningMesh";
+import SpinningWobbleMesh from "../SpinningWobbleMesh/SpinningWobbleMesh";
 
 softShadows();
 
@@ -33,12 +33,10 @@ export default function AnimatedBlocks() {
                     <planeBufferGeometry attach='geometry' args={[100, 100]} />
                     <shadowMaterial attach='material' opacity={0.3} />
                 </mesh>
-                <SpinningMesh position={[0,1,0]} args={[3,2,1]} color='lightblue' speed={2}/>
-                <SpinningMesh position={[-2,1,-5]} color='pink' speed={6}/>
-                <SpinningMesh position={[5,1,-2]} color='pink' speed={6}/>
+                <SpinningWobbleMesh position={[0,1,0]} args={[3,2,1]} color='lightblue' speed={2}/>
+                <SpinningWobbleMesh position={[-2,1,-5]} color='pink' speed={6}/>
+                <SpinningWobbleMesh position={[5,1,-2]} color='pink' speed={6}/>
             </group>
-
-            
             <OrbitControls/>
         </Canvas>
     )

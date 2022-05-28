@@ -4,7 +4,7 @@ import { MeshWobbleMaterial } from "@react-three/drei";
 import { useSpring, animated } from "@react-spring/three";
 
 
-export default function SpinningMesh({ position, args, color, speed }) {
+export default function SpinningWobbleMesh({ position, args, color, speed }) {
     const mesh = useRef(null);
     useFrame(() => {
         const rotationLevel = 0.01
@@ -26,7 +26,6 @@ export default function SpinningMesh({ position, args, color, speed }) {
             ref={mesh}
         >
             <boxBufferGeometry attach='geometry' args={args}/>
-            {/* <meshStandardMaterial attach='material' color={color} /> */}
             <MeshWobbleMaterial 
                 attach='material' 
                 color={color} 

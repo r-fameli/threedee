@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
+import CubeEntryAnimation from './components/CubeEntryAnimation/CubeEntryAnimation';
 import GlobalStyle from './globalStyles.styled';
-import AnimatedBlocks from './components/AnimatedBlocks/AnimatedBlocks';
 
 function App() {
   return (
     <Fragment>
-      <GlobalStyle />
-      <AnimatedBlocks/>
+      <GlobalStyle opacity/>
+      <CubeEntryAnimation />
+      {/* <AnimatedBlocks/> */}
     </Fragment>
   )
 }
